@@ -4,9 +4,43 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class TestHelper {
            
 	private static WebElement element=null;
+	
+	public static void getPageElements(){
+		Properties prop = new Properties();
+		InputStream input= null;
+
+		try {
+
+			input = new FileInputStream("C://Users//amit 1//workspace-mars//dr//src//properties//login-elements.properties");
+
+			// load a properties file
+			prop.load(input);
+
+			// get the property value and print it out
+			System.out.println(prop.getProperty("email-xpath"));
+			System.out.println(prop.getProperty("password-xpath"));
+			
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 	  
 	   /*
 	    * Login

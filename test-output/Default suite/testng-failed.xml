@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.AddprojectNg">
+      <class name="testcases.EditDataroom">
         <methods>
-          <include name="testRestrictDomain"/>
-          <include name="afterMethod"/>
+          <include name="f" invocation-numbers="1"/>
         </methods>
-      </class> <!-- testcases.AddprojectNg -->
+      </class> <!-- testcases.EditDataroom -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
