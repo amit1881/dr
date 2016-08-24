@@ -12,6 +12,8 @@ import java.util.Properties;
 public class TestHelper {
            
 	private static WebElement element=null;
+	private static String emailXpath;
+	private static String passwordXpath;
 	
 	public static void getPageElements(){
 		Properties prop = new Properties();
@@ -25,9 +27,12 @@ public class TestHelper {
 			prop.load(input);
 
 			// get the property value and print it out
-			System.out.println(prop.getProperty("email-xpath"));
-			System.out.println(prop.getProperty("password-xpath"));
+			//System.out.println(prop.getProperty("email-xpath"));
+			//System.out.println(prop.getProperty("password-xpath"));
 			
+			//get the property value
+			emailXpath=prop.getProperty("email-xpath");
+			passwordXpath=prop.getProperty("password-xpath");
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -41,14 +46,18 @@ public class TestHelper {
 			}
 		}
 	}
-	  
+	static {
+	    getPageElements();
+	  }
 	   /*
 	    * Login
 	    */
 	   //Email address
 	  public static WebElement EmailAddress(WebDriver driver)
 	   {
-		   element=driver.findElement(By.xpath(".//*[@id='email']"));
+		   
+		   //element=driver.findElement(By.xpath(".//*[@id='email']"));
+		   element=driver.findElement(By.xpath(emailXpath));
 		   return element;
 	   }
 	  
@@ -56,7 +65,9 @@ public class TestHelper {
 	  
 	  public static WebElement LoginPassword(WebDriver driver)
 	   {
-		   element=driver.findElement(By.xpath(".//*[@id='password']"));
+		   
+		   //element=driver.findElement(By.xpath(".//*[@id='password']"));
+		   element=driver.findElement(By.xpath(passwordXpath));
 		   return element;
 	   }
 	   //Check box

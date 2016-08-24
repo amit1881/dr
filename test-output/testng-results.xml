@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68487" started-at="2016-08-04T09:29:19Z" finished-at="2016-08-04T09:30:27Z">
+  <suite name="Default suite" duration-ms="13365" started-at="2016-08-24T06:07:48Z" finished-at="2016-08-24T06:08:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68487" started-at="2016-08-04T09:29:19Z" finished-at="2016-08-04T09:30:27Z">
-      <class name="testcases.EditDataroom">
-        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:testcases.EditDataroom@eff760]" name="f" duration-ms="32122" started-at="2016-08-04T14:59:19Z" data-provider="email" finished-at="2016-08-04T14:59:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[anuj@ravabe.com]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="13365" started-at="2016-08-24T06:07:48Z" finished-at="2016-08-24T06:08:01Z">
+      <class name="testcases.LoginNg">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.LoginNg@c87b21]" name="beforeMethod" is-config="true" duration-ms="7063" started-at="2016-08-24T11:37:48Z" finished-at="2016-08-24T11:37:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:testcases.EditDataroom@eff760]" name="f" duration-ms="35956" started-at="2016-08-04T14:59:51Z" data-provider="email" finished-at="2016-08-04T15:00:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[keshav@ravabe.com]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testcases.LoginNg@c87b21]" name="testLogin" duration-ms="3930" started-at="2016-08-24T11:37:55Z" finished-at="2016-08-24T11:37:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- testcases.EditDataroom -->
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.LoginNg@c87b21]" name="afterMethod" is-config="true" duration-ms="2355" started-at="2016-08-24T11:37:59Z" finished-at="2016-08-24T11:38:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.LoginNg -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
